@@ -7,12 +7,19 @@
 }
 
 .navbar1{
-    display: flex;
-    justify-content: space-between;
+    position: relative;
     padding: 10px 20px 5px 20px;
     background-color: rgb(78, 78, 218);
     color: #fff;
-	padding: 20px 10px;
+}
+.navbar1 .navbar-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar1 .navbar-container .menu i{
+    font-size: 25px;
+    display: none;
 }
 
 .navbar1 .logo{
@@ -37,6 +44,40 @@
 .navbar1 .links p a{
     text-decoration: none;
     color: #fff;
+}
+
+.navbar1 .menu-content{
+    position: absolute;
+    top: 40px;
+    right: -300px;
+    z-index: 1;
+    height: 500px;
+    width: 300px;
+    background-color: rgb(78, 78, 218);
+    display: none;
+    transition: 0.5s ease;
+}
+
+.navbar1 .menu-content ul{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+	padding-left: 30px;
+}
+
+.navbar1 .menu-content ul li{
+    padding: 10px 0px;
+}
+
+.navbar1 .menu-content ul li a{
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.navbar1 .menu-content ul li a:hover{
+    color: rgb(40, 40, 141);
 }
 
 .section{
@@ -140,6 +181,40 @@
 .content-section .social{
 	text-align: center;
 }
+
+}
+
+
+@media screen and (max-width:1065px) {
+    .navbar1 .navbar-container .menu i{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:525px) {
+
+    .navbar1 .navbar-container .menu i{
+        display: block;
+    }
+
+    .menu-content.active{
+        display: block;
+        right: 0;
+        transition: 0.5s ease;
+    }
+
+	.navbar1 .links{
+        display: none;
+    }
+}
+
+@media screen and (max-width:347px) {
+    .menu-content.active{
+        display: block;
+        right: 0;
+        transition: 0.5s ease-in;
+    }
 
 }
 

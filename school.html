@@ -24,14 +24,33 @@
 <body>
     <!-- Navbar -->
     <div class="navbar1">
-        <div class="logo">
-            <a href="school.html">EduTech</a>
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="school.html">EduTech</a>
+            </div>
+
+            <div>
+                <div class="links">
+                    <p><a href="school.html">Home</a> </p>
+                    <p><a href="index.html">About</a> </p>
+                </div>
+        
+                <div class="menu">
+                    <i class="fa fa-bars" id="menu" aria-hidden="true"></i>
+                </div>
+            </div>
+            
         </div>
-        <div class="links">
-            <p><a href="school.html">Home</a> </p>
-            <p><a href="index.html">About</a> </p>
+        
+        <div class="menu-content" id="menu-content">
+            <ul>
+                <li><a href="school.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+            </ul>
         </div>
     </div>
+
+    
 
     <!-- Content -->
     <div class="body-container ">
@@ -156,6 +175,25 @@
                         </p>
                     </div>
                 </div>
+
+
+                <div class="content col-md-4 col-sm-6 col-12">
+                    <div class="content-wrapper shadow-sm">
+                        <div class="image">
+                            <img src="user-icon.png" alt="user-icon.png">
+                        </div>
+
+                        <p class="name">Yussif Bubakari</p>
+                        
+                        <p class="p1">Financial Accountant</p>
+
+                        <p class="p2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Consequatur voluptates libero deserunt quis eligendi aliquid 
+                            qui non maxime aliquam natus.
+                        </p>
+                    </div>
+                </div>
             </div>
            
         </div>
@@ -168,10 +206,32 @@
             </div>
 
             <div>
-                <p>Designed by Group 3</p>
+                <p>Designed by Group 1</p>
             </div>
         </div>
     </div>
+
+
+    <script>
+        const menu = document.getElementById('menu')
+        const menuContent = document.getElementById('menu-content')
+        let state = false
+        menu.addEventListener('click', () => {
+            state = !state
+            if (state == false) {
+                menu.classList.add('fa-bars')
+                menu.classList.remove('fa-times')
+                menuContent.classList.remove('active')
+                
+            } else if (state === true){
+                menu.classList.remove('fa-bars')
+                menu.classList.add('fa-times')
+                menuContent.classList.add('active')
+                
+            }
+            
+        })
+    </script>
     
 </body>
 </html>

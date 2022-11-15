@@ -6,17 +6,36 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>	
 <body>
 	<div class="section">
 		<!-- Navbar -->
 		<div class="navbar1">
-			<div class="logo">
-				<a href="school.html">EduTech</a>
+			<div class="navbar-container">
+				<div class="logo">
+					<a href="school.html">EduTech</a>
+				</div>
+	
+				<div>
+					<div class="links">
+						<p><a href="school.html">Home</a> </p>
+						<p><a href="index.html">About</a> </p>
+					</div>
+			
+					<div class="menu">
+						<i class="fa fa-bars" id="menu" aria-hidden="true"></i>
+					</div>
+				</div>
+				
 			</div>
-			<div class="links">
-				<p><a href="school.html">Home</a> </p>
-				<p><a href="index.html">About</a> </p>
+			
+			<div class="menu-content" id="menu-content">
+				<ul>
+					<li><a href="school.html">Home</a></li>
+					<li><a href="index.html">About</a></li>
+				</ul>
 			</div>
 		</div>
 		
@@ -47,6 +66,23 @@
 		</div>
 	</div>
 
-	
+	<script>
+        const menu = document.getElementById('menu')
+        const menuContent = document.getElementById('menu-content')
+        let state = false
+        menu.addEventListener('click', () => {
+            state = !state
+            if (state == false) {
+                menu.classList.add('fa-bars')
+                menu.classList.remove('fa-times')
+                menuContent.classList.remove('active')
+                
+            } else if (state === true){
+                menu.classList.remove('fa-bars')
+                menu.classList.add('fa-times')
+                menuContent.classList.add('active') 
+            }
+        })
+    </script>
 </body>
 </html>
