@@ -144,6 +144,40 @@
 }
 
 
+@media screen and (max-width:1065px) {
+    .navbar1 .navbar-container .menu i{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:525px) {
+
+    .navbar1 .navbar-container .menu i{
+        display: block;
+    }
+
+    .menu-content.active{
+        display: block;
+        right: 0;
+        transition: 0.5s ease;
+    }
+
+	.navbar1 .links{
+        display: none;
+    }
+}
+
+@media screen and (max-width:347px) {
+    .menu-content.active{
+        display: block;
+        right: 0;
+        transition: 0.5s ease-in;
+    }
+
+}
+
+
 
 
 
